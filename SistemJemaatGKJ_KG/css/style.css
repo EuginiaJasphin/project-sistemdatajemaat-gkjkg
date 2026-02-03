@@ -1,0 +1,55 @@
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+
+
+  .red{font-family:Tahoma; font-size:11px;  color:#F2D5D4;}
+
+
+  .white{font-family:Geneva, Arial, Helvetica, sans-serif; font-size:12px;  color:#FFFFFF;text-decoration:none}
+  .putihkecil{font-family:Tahoma; font-size:11px;  color:#FFFFFF;text-decoration:none}
+  .white2{font-family:Tahoma; font-size:14px;  color:#FFFFFF;text-decoration:none}
+  .orange{font-family:Tahoma; font-size:12px;  color:#FF9900;}
+  
+  .greentitle{font-family: Georgia; font-size:15px;  color:#FF6600; }
+  .whitetitle{font-family: Georgia; font-size:17px;  color:#FFFFFF; }
+  .kuningtitle{font-family:Tahoma; font-size:16px;  color:#FFFF00; }
+  .kuningtitle2{font-family:Tahoma; font-size:14px;  color:#FFFF00; }
+  .orangetitle1{font-family:Tahoma; font-size:16px;  color:#FFCC00; }
+   .orangelink{font-family:Tahoma; font-size:13px;  color:#FFCC00; }
+  .merahtitle{font-family: Georgia; font-size:15px;  color:#8F0500; }
+  
+  .read_more{font-family:Arial; font-size:12px;  color:#5398FF ; text-decoration:none}
+  .bluetitle{font-family:Arial; font-size:13px;  color:#5398FF ; text-decoration:none}
+  
+  .content{font-family:Tahoma; font-size:11px;  color:#000000; text-decoration:none}
+  .content4{font-family:Trebuchet MS; font-size:14px;  color:##412525; text-decoration:none;}
+  .content3{font-family:Verdana; font-size:12px;  color:#412525; text-decoration:none; line-height:17px}
+  .content2{font-family:Tahoma; font-size:13px;  color:#412525}
+  .laman{ font-family:Verdana; font-size:11px;  color:#151515; text-decoration:none; font-variant:normal; font-weight:normal; line-height:15px;}
+  .table { margin: 0em; border: 1px solid #ccc; }
+  .td, th { padding: .3em; } 
+  
+  /* ini untuk form search */
+
+.inputbox {
+font-family: Verdana;
+font-size: 11px;
+color: #333;
+background-color:none ;
+text-decoration:none
+
+}
