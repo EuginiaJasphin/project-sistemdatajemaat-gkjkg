@@ -16,16 +16,26 @@ class UserPengurusSeeder extends Seeder
             'deskripsi' => 'Akses penuh ke seluruh sistem data jemaat'
         ]);
 
-        // 2. Masukkan data ke tabel 'users'
+        // 2. Buat data Jemaat untuk Admin (Karena id_jemaat di tabel users adalah NOT NULL)
+        $jemaatId = DB::table('jemaat')->insertGetId([
+            'nama_lengkap' => 'Administrator Sistem',
+            'nama_panggilan' => 'Admin',
+            'gender' => 'L',
+            'status_jemaat' => 'aktif',
+            // 'created_at' => now(),
+        ]);
+
+        // 3. Masukkan data ke tabel 'users'
         // Catatan: Pastikan id_jemaat sudah ada di tabel jemaat atau null jika boleh kosong
         $userId = DB::table('users')->insertGetId([
+            'id_jemaat' => $jemaatId, 
             'username' => 'admin_gkjkg',
-            'password' => Hash::make('admin123'), // Password terenkripsi
+            'password' => Hash::make('admin123'),
             'status_acc' => 'aktif',
             'created_at' => now(),
         ]);
 
-        // 3. Masukkan data ke tabel 'user_role' (Relasi)
+        // 4. Masukkan data ke tabel 'user_role' (Relasi)
         DB::table('user_role')->insert([
             'id_user' => $userId,
             'id_role' => $roleId
