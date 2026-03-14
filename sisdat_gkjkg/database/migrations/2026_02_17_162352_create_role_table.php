@@ -4,16 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
         Schema::create('role', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_role');
+            $table->string('nama_role', 20)->unique();
+            $table->string('deskripsi', 50)->nullable();
         });
     }
 
