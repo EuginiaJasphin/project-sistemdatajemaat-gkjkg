@@ -12,8 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('gereja', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_gereja');
+            $table->string('nama_gereja', 150);
+            $table->string('kota', 40)->nullable();
+            $table->string('provinsi', 40)->nullable();
+            $table->enum('status', ['aktif', 'nonaktif'])->default('aktif');
         });
     }
 
