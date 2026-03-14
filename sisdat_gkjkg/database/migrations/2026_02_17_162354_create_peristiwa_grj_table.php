@@ -11,11 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('peristiwa_grj', function (Blueprint $table) {
-            $table->id('id_peristiwa_grj');
-            $table->foreignId('id_jemaat')->constrained('jemaat', 'id_jemaat')->onDelete('cascade');
-            $table->enum('jenis', ['baptis', 'sidi', 'nikah']);
-            $table->year('tahun');
-            $table->text('deskripsi')->nullable();
+            $table->id();
+            $table->timestamps();
         });
     }
 

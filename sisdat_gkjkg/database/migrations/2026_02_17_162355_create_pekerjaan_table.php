@@ -11,10 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('pekerjaan', function (Blueprint $table) {
-            $table->id('id_pekerjaan');
-            $table->foreignId('id_jemaat')->constrained('jemaat', 'id_jemaat')->onDelete('cascade');
-            $table->string('jenis_pekerjaan', 50)->nullable();
-            $table->string('instansi', 100)->nullable();
+            $table->id();
+            $table->timestamps();
         });
     }
 
