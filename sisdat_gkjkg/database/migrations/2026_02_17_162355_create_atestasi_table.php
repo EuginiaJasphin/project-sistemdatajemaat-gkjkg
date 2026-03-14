@@ -11,8 +11,13 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('atestasi', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_atestasi');
+            $table->foreignId('id_jemaat')->constrained('jemaat', 'id_jemaat')->onDelete('cascade');
+            $table->foreignId('id_gereja_asal')->nullable()->constrained('gereja', 'id_gereja')->onDelete('set null');
+            $table->foreignId('id_gereja_tujuan')->nullable()->constrained('gereja', 'id_gereja')->onDelete('set null');
+            $table->enum('keterangan', ['masuk', 'keluar']);
+            $table->year('tahun');
+            $table->text('deskripsi_ats')->nullable();
         });
     }
 

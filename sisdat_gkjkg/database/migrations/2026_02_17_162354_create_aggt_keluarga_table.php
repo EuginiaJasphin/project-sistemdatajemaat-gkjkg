@@ -11,8 +11,11 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('aggt_keluarga', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->string('id_aggt_keluarga', 16)->primary();
+            $table->foreignId('id_jemaat')->constrained('jemaat', 'id_jemaat')->onDelete('cascade');
+            $table->string('no_kk_gereja', 16);
+            $table->foreign('no_kk_gereja')->references('no_kk_gereja')->on('keluarga')->onDelete('cascade');
+            $table->enum('status_dalam_keluarga', ['kepala', 'istri', 'anak', 'lainnya'])->nullable();
         });
     }
 
